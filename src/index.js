@@ -1,6 +1,6 @@
 const { WebSocket } = require("ws");
 
-const ws = new WebSocket("wss://modularizar.com/ws", {
+const ws = new WebSocket(process.env.WEBSOCKETS_ENDPOINT||"wss://modularizar.com/ws", {
   perMessageDeflate: false,
 });
 
